@@ -15,10 +15,10 @@ public class TaxCalculatorClasses {
      */
     public static void main(String[] args) {
         double grossIncome = 50000;
-        TaxCalculator taxCalculator = new TaxCalculator();
-        double taxPAYE = taxCalculator.calculatePAYE(grossIncome);
-        double taxPRSI = taxCalculator.calculatePRSI(grossIncome);
-        double taxUSC = taxCalculator.GetTaxUSC(grossIncome);
+        TaxCalculator tc = new TaxCalculator();
+        double taxPAYE = tc.calculatePAYE(grossIncome);
+        double taxPRSI = tc.calculatePRSI(grossIncome);
+        double taxUSC = tc.GetTaxUSC(grossIncome);
         
         double tax = taxPAYE + taxPRSI + taxUSC;
        
