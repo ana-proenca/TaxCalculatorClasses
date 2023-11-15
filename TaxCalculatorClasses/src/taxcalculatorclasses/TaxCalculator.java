@@ -9,11 +9,11 @@ package taxcalculatorclasses;
  * @author anaclaudiaproenca
  */
 public class TaxCalculator {
-    public static double calculatePRSI(double grossIncome) {
+    public double calculatePRSI(double grossIncome) {
         return (grossIncome * 0.04);
     }
     
-    public static double calculatePAYE(double grossIncome) {
+    public double calculatePAYE(double grossIncome) {
         
         if (grossIncome < 40000) {
             return (grossIncome * 0.20);
@@ -22,7 +22,7 @@ public class TaxCalculator {
         }
     }
     
-    public static double calculateUSC(double grossIncome, double targetUsc, double tax){
+    public double calculateUSC(double grossIncome, double targetUsc, double tax){
         
         if(grossIncome < targetUsc){
             return (grossIncome * tax);
@@ -32,7 +32,7 @@ public class TaxCalculator {
         }
     }
     
-    public static double GetTaxUSC(double grossIncome){
+    public double GetTaxUSC(double grossIncome){
         double taxUSC = 0;
         taxUSC += calculateUSC(grossIncome, 12012, 0.005);
         
