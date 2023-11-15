@@ -4,6 +4,10 @@
  */
 package taxcalculatorclasses;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author anaclaudiaproenca
@@ -14,7 +18,20 @@ public class TaxCalculatorClasses {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        try {
+            Scanner sc = new Scanner(new FileReader("test/income.txt"));
+            do  {
+                Income incomeClass = new Income();
+                double nextIncome = sc.nextDouble();
+                incomeClass.setIncome(nextIncome);
+                System.out.println(incomeClass.getIncome());
+            } while (sc.hasNextDouble());
+            
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        
     }
     
 }
