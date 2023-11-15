@@ -23,3 +23,5 @@
 hs_err_pid*
 replay_pid*
 /TaxCalculatorClasses/nbproject/private/
+TaxCalculatorClasses/.DS_Store
+.DS_Store
