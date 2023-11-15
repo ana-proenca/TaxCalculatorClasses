@@ -4,7 +4,9 @@
  */
 package taxcalculatorclasses;
 
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -21,13 +23,15 @@ public class TaxCalculatorClasses {
         
         try {
             Scanner sc = new Scanner(new FileReader("test/income.txt"));
-            do  {
+            BufferedWriter bw = new BufferedWriter(new FileWriter("test/incomeTax.txt", true));
+            do {
                 Income incomeClass = new Income();
                 double nextIncome = sc.nextDouble();
                 incomeClass.setIncome(nextIncome);
-                System.out.println(incomeClass.getIncome());
+                bw.write(Double.toString(incomeClass.getIncome()));
             } while (sc.hasNextDouble());
-            
+
+            bw.close();
         } catch (IOException e) {
             System.out.println(e);
         }
