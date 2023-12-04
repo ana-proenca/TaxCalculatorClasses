@@ -23,12 +23,12 @@ public class TaxCalculatorClasses {
         
         try {
             Scanner sc = new Scanner(new FileReader("test/income.txt"));
-            BufferedWriter bw = new BufferedWriter(new FileWriter("test/incomeTax.txt", true));
+            BufferedWriter bw = new BufferedWriter(new FileWriter("test/incomeTax.txt", false));
             do {
                 Income incomeClass = new Income();
                 double nextIncome = sc.nextDouble();
                 incomeClass.setIncome(nextIncome);
-                bw.write(Double.toString(incomeClass.getIncome()));
+                bw.write(Double.toString(incomeClass.getIncome()) + "\n");
             } while (sc.hasNextDouble());
 
             bw.close();
