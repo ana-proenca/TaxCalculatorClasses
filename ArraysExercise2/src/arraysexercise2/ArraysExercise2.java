@@ -26,5 +26,4 @@ public class ArraysExercise2 {
             System.out.println(nameArray[i]);
         }
     }
-    
 }
