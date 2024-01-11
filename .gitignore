@@ -27,3 +27,14 @@ TaxCalculatorClasses/.DS_Store
 /TaxCalculatorClasses/build/
 /TaxCalculatorClasses/dist/
 .DS_Store
+/Alien/target/
+/Score/target/
+/MethodChallenge/target/
+/SpeedConverter/target/
+/ArrayExercise1/nbproject/private/
+/ArrayExercise1/build/
+/ArraysExercise2/nbproject/private/
+/ArraysExercise2/build/
+*.xml
+*.mf
+*.properties
